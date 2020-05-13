@@ -17,4 +17,4 @@ def delete_batch(batch_code):
         return jsonify({"error": 'batch_code does not exists'})
     b.deleted = True
     db.session.commit()
-    return jsonify({"status": 200, "Message": 'Delete done'})
+    return jsonify({"status": 200, "message": 'Delete done'})

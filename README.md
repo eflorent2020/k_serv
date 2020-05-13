@@ -11,13 +11,19 @@ apt-get install git make python3
 ```
 
 ## development
-
+### Unix
 ```
 make install
 make pytest
 make run
 ```
 
+### Windows
+```
+make -f MakeFile.win install
+make -f MakeFile.win pytest
+make -f MakeFile.win run
+```
 
 
 ## References

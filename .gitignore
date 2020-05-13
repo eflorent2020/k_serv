@@ -1,4 +1,6 @@
-data
 .idea
 __pycache__
 venv
+
+data/*
+!data/.gitkeep

@@ -10,7 +10,8 @@ db = SQLAlchemy(app)
 
 from api.controller import index
 from api.controller import batchs
-
+from api.controller import signboards
 
 if __name__ == "__main__":
    serve(app, host='0.0.0.0', port=8000)
+

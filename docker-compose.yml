@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  nginx_svc:
+    container_name: nginx_inst
+    image: steveltn/https-portal:1.3.0
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./ssl_certs:/var/lib/https-portal
+    environment:
+      - STAGE=staging
+      - DOMAINS=k_serv.youspot.me -> http://k_srv_inst:5000
+
+  k_srv_svc:
+    image: k_srv # TODO add version
+    container_name: k_srv_inst
+    hostname: k_srv_inst
+    volumes:
+     - ./data:/data

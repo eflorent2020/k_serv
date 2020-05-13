@@ -1,0 +1,18 @@
+- hosts: all
+  become: true
+  gather_facts: no
+
+  tasks:
+  - git:
+      repo: https://github.com/emmanuel-florent/k_serv.git
+      dest: ./k_srv
+
+  - name: Run 'install' target as root
+    make:
+      chdir: ./k_srv
+      target: build
+    become: yes
+
+  - name: start stack
+    docker_compose:
+      project_src: "./k_srv"

@@ -11,7 +11,7 @@ services:
     volumes:
       - ./ssl_certs:/var/lib/https-portal
     environment:
-      - STAGE=staging
+      - STAGE=production
       - DOMAINS=ksrv.youspot.me -> http://k_srv_inst:8000
 
   k_srv_svc:

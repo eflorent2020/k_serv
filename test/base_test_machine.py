@@ -4,6 +4,17 @@ import pytest
 import server
 import json
 
+from server import db
+from api.model.batch import Batch
+
+def make_batch():
+    b = Batch().query.filter_by(batch_code="batch1").first()
+    if not b:
+        batch = Batch()
+        batch.batch_code = "batch1"
+        db.session.add(batch)
+        db.session.commit()
+
 
 @pytest.fixture
 def client():

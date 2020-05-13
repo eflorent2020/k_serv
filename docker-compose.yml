@@ -12,11 +12,11 @@ services:
       - ./ssl_certs:/var/lib/https-portal
     environment:
       - STAGE=staging
-      - DOMAINS=k_serv.youspot.me -> http://k_serv_inst:5000
+      - DOMAINS=k_serv.youspot.me -> http://k_srv_inst:5000
 
-  k_serv_svc:
-    image: k_serv # TODO add version
-    container_name: k_serv_inst
-    hostname: k_serv_inst
+  k_srv_svc:
+    image: k_srv # TODO add version
+    container_name: k_srv_inst
+    hostname: k_srv_inst
     volumes:
      - ./data:/data

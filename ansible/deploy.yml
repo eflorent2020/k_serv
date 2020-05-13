@@ -15,4 +15,4 @@
 
   - name: start stack
     docker_compose:
-      project_src: "."
+      project_src: "./k_srv"

@@ -14,7 +14,7 @@ def get_batch():
 def delete_batch(batch_code):
     b = Batch.query.get(batch_code)
     if (b is None):
-        return jsonify({"Message": 'Erreur pendant la suppression'})
+        return jsonify({"error": 'batch_code does not exists'})
     b.deleted = True
     db.session.commit()
-    return jsonify({"Message": 'Suppression effectué'})
+    return jsonify({"status": 200, "Message": 'Delete done'})

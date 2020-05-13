@@ -7,3 +7,4 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./data/test.db' # TODO mettre
 db = SQLAlchemy(app)
 
 from api.controller import index
+from api.controller import batchs

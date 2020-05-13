@@ -20,5 +20,5 @@ def test_delete_batch(client):
     rv = client.delete('/batchs/batch1')
     assert rv.status == "200 OK"
     json_resp = json.loads(rv.data)
-    assert json_resp["Message"] == "Delete done"
+    assert json_resp["message"] == "Delete done"
 

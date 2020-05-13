@@ -4,7 +4,6 @@ from datetime import datetime
 class Signboard(db.Model):
 
     signboard_code = db.Column(db.String, primary_key=True)
-    customer_code = db.Column(db.String, primary_key=True)
     author = db.Column(db.String(120))
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     date_updated = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)

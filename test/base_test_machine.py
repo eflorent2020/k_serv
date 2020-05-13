@@ -6,6 +6,7 @@ import json
 
 from server import db
 from api.model.batch import Batch
+from api.model.signboard import Signboard
 
 def make_batch():
     b = Batch().query.filter_by(batch_code="batch1").first()
@@ -13,6 +14,14 @@ def make_batch():
         batch = Batch()
         batch.batch_code = "batch1"
         db.session.add(batch)
+        db.session.commit()
+
+def make_signboard():
+    b = Signboard().query.filter_by(signboard_code="signboard1").first()
+    if not b:
+        signboard = Signboard()
+        signboard.signboard_code = "signboard1"
+        db.session.add(signboard)
         db.session.commit()
 
 

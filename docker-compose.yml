@@ -12,7 +12,7 @@ services:
       - ./ssl_certs:/var/lib/https-portal
     environment:
       - STAGE=production
-      - DOMAINS=ksrv.youspot.me -> http://k_srv_inst:8000
+      - DOMAINS=ksrv.youspot.me -> http://k_srv_inst:3000
 
   k_srv_svc:
     image: k_srv # TODO add version
